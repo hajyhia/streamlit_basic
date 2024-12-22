@@ -169,3 +169,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/streamlit_basic.iml
+/.idea/vcs.xml
