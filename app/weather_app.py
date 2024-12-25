@@ -4,6 +4,7 @@ import requests
 API_KEY = "a97bfd1e514bbcb662cacbee64cb8eab"  # Replace with your OpenWeatherMap API key
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
+
 def fetch_weather(city_name):
     """
     Fetches weather data for the given city.
@@ -28,6 +29,7 @@ def fetch_weather(city_name):
         print(f"Error fetching weather data: {e}")
         return None
 
+
 def display_weather(weather_data):
     """
     Displays weather information in a user-friendly format.
@@ -50,6 +52,7 @@ def display_weather(weather_data):
     else:
         print("Unable to display weather data.")
 
+
 def main():
     """
     Main function to run the weather app.
@@ -58,6 +61,7 @@ def main():
     city_name = input("Enter the name of the city: ").strip()
     weather_data = fetch_weather(city_name)
     display_weather(weather_data)
+
 
 if __name__ == "__main__":
     main()

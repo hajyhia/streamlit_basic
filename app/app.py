@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import json
 
 def main():
     # Access secrets
@@ -35,6 +38,24 @@ def main():
         "This is a demo application built with Streamlit to showcase its interactive capabilities. "
         "Streamlit makes it easy to create web apps for machine learning and data science projects."
     )
+
+    # Create a sample dataset
+    data = pd.DataFrame({
+        'x': np.arange(10),
+        'y': np.random.randn(10)
+    })
+
+    st.write(data)
+    st.subheader("Line Chart Example")
+    st.line_chart(data, x='x', y='y')
+    # df = pd.read_json("weather_data.json")
+    with open("weather_data.json", "r") as file:
+        data = json.load(file)
+    st.write(data["hourly"])
+    weather_data = data["hourly"]
+    for item in weather_data:
+        for key, value in item:
+            st.write(key, value)
 
 if __name__ == "__main__":
     main()

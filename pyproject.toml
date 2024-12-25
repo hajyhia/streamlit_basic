@@ -9,6 +9,10 @@ readme = "README.md"
 python = "^3.11"
 requests = "^2.32.3"
 pandas = "^2.2.3"
+streamlit = "^1.41.1"
+datetime = "^5.5"
+pytz = "^2024.2"
+timezonefinder = "^6.5.7"
 
 
 [build-system]
