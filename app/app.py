@@ -1,6 +1,14 @@
 import streamlit as st
 
 def main():
+    # Access secrets
+    api_key = st.secrets["general"]["api_key"]
+    db_username = st.secrets["general"]["db_username"]
+    db_password = st.secrets["general"]["db_password"]
+
+    # Example usage
+    st.write(f"API Key: {api_key}")
+
     # Set the title of the app
     st.title("Welcome to My Streamlit App")
 
@@ -21,7 +29,7 @@ def main():
         else:
             st.warning("Please enter your name to see the message!")
 
-    # Add an additional feature
+    # Add a feature
     st.sidebar.title("About This App")
     st.sidebar.info(
         "This is a demo application built with Streamlit to showcase its interactive capabilities. "
